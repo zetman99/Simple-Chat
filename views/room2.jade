@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h2 ddd
+  - if (!isSuccess)
+    script
+      alert('방에 입장할 수 없습니다.');
+      location.href = '/enter';
+  - else
+    h3 방 제목 : 
+      span#roomName= roomName
+    #chatWindow(style='width:400px; height:400px; overflow:auto; border:1px solid #000; float:left; margin-right:10px')
+    
+    
+    
